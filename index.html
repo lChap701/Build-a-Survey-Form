@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC Responsive Web Design Projects - Build a Survey Form</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="container">
+      <form id="survey-form">
+        <h1 id="title">Customer satisfaction survey</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve our services
+        </p>
+        <hr />
+        <div class="row">
+          <div class="col-25">
+            <label for="name" id="name-label">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="First and last name"
+              required
+            />
+          </div>
+
+          <div class="col-25">
+            <label for="email" id="email-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="ex: example@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="col-25">
+            <label for="age" id="number-label">Age</label>
+            <input
+              type="number"
+              min="18"
+              max="100"
+              name="age"
+              id="number"
+              required
+              placeholder="18 years or older"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-50">
+            <label for="services"> Which service are you rating? </label>
+            <select id="dropdown" name="services">
+              <option disabled selected value>Choose a service</option>
+              <option value="3G Protection">3G Protection</option>
+              <option value="4G Protection">4G Protection</option>
+              <option value="5G Protection">5G Protection</option>
+              <option value="Database Protection">Database Protection</option>
+              <option value="Developer Pack">Developer Pack</option>
+              <option value="Developer Kit">Developer Kit</option>
+              <option value="Password Protection">Password Protection</option>
+            </select>
+          </div>
+
+          <div class="col-25">
+            <label for="times" id="number-label"
+              >How many times has this been used?</label
+            >
+            <input
+              type="number"
+              id="times"
+              name="times"
+              min="1"
+              placeholder="Must be greater than 0"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-75">
+            <label> How satisfied are you with this service? </label>
+            <label for="satisfaction"
+              ><input
+                type="radio"
+                name="satisfaction"
+                value="very-unsatisfied"
+              />
+              Very unsatisfied</label
+            >
+            <label for="satisfaction"
+              ><input type="radio" name="satisfaction" value="unsatisfied" />
+              Unsatisfied</label
+            >
+            <label for="satisfaction"
+              ><input type="radio" name="satisfaction" value="indifferent" />
+              Indifferent</label
+            >
+            <label for="satisfaction"
+              ><input type="radio" name="satisfaction" value="satisfied" />
+              Satisfied</label
+            >
+            <label for="satisfaction"
+              ><input type="radio" name="satisfaction" value="very-satisfied" />
+              Very satisfied</label
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-75">
+            <label for="comments"> Comments (optional) </label>
+            <textarea
+              name="comments"
+              placeholder="Enter comments here"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-75">
+            <label for="privacy"
+              ><input type="checkbox" name="privacy" value="agree" /> I
+              understand the Privacy Policy</label
+            >
+            <label for="agree"
+              ><input type="checkbox" name="agree" value="agree" /> Allow my
+              name and contact info to be shared</label
+            >
+          </div>
+        </div>
+
+        <div class="row col-75">
+          <input type="submit" name="submit" id="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
